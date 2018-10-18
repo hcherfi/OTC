@@ -1,0 +1,8 @@
+
+.DS_Store
+*.pyc
+*.egg-info
+server/localdev-config.json
+localdev-config.json
+server/localdev-config.json
+venv
