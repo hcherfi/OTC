@@ -1,0 +1,5 @@
+{
+    "python.jediEnabled": false,
+    "python.linting.pylintEnabled": false,
+    "python.pythonPath": "${workspaceFolder}/python/bin/python"
+}
