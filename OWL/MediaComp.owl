@@ -1,0 +1,176 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.OntologyTestChallenge.org/hacenecherfi/ontologies/2018/"
+     xml:base="http://www.OntologyTestChallenge.org/hacenecherfi/ontologies/2018/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.OntologyTestChallenge.org/hacenecherfi/ontologies/2018/">
+        <owl:versionIRI rdf:resource="http://www.OntologyTestChallenge.org/hacenecherfi/ontologies/2018/1.0"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+    
+    <!-- http://www.w3.org/2002/07/owl#sameAs -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#sameAs"/>
+
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#definition -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/ns/prov#definition -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/ns/prov#definition"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.OntologyTestChallenge.org/hacenecherfi/ontologies/2018/Broadcaster -->
+
+    <owl:Class rdf:about="http://www.OntologyTestChallenge.org/hacenecherfi/ontologies/2018/Broadcaster">
+        <rdfs:subClassOf rdf:resource="http://www.OntologyTestChallenge.org/hacenecherfi/ontologies/2018/MediaCompany"/>
+        <skos:definition xml:lang="en">A company that broadcasts audio or video content to a dispersed audience via any audio visual medium.</skos:definition>
+        <rdfs:label xml:lang="en">Broadcaster</rdfs:label>
+        <owl:sameAs>http://www.ontotext.com/proton/protonext#Broadcaster</owl:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OntologyTestChallenge.org/hacenecherfi/ontologies/2018/MediaCompany -->
+
+    <owl:Class rdf:about="http://www.OntologyTestChallenge.org/hacenecherfi/ontologies/2018/MediaCompany">
+        <skos:definition xml:lang="en">A company which deals with media products and material</skos:definition>
+        <rdfs:label xml:lang="fr">Compagnie multimédia</rdfs:label>
+        <rdfs:label xml:lang="en">Media company</rdfs:label>
+        <owl:sameAs>http://www.ontotext.com/proton/protonext#MediaCompany</owl:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OntologyTestChallenge.org/hacenecherfi/ontologies/2018/MovieCompany -->
+
+    <owl:Class rdf:about="http://www.OntologyTestChallenge.org/hacenecherfi/ontologies/2018/MovieCompany">
+        <rdfs:subClassOf rdf:resource="http://www.OntologyTestChallenge.org/hacenecherfi/ontologies/2018/MediaCompany"/>
+        <skos:definition xml:lang="en">A comapny making films, also called movies or motion pictures, is a series of still or moving images</skos:definition>
+        <rdfs:label xml:lang="en">Movie company</rdfs:label>
+        <owl:sameAs>http://www.ontotext.com/proton/protonext#Movie</owl:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OntologyTestChallenge.org/hacenecherfi/ontologies/2018/MusicalProductor -->
+
+    <owl:Class rdf:about="http://www.OntologyTestChallenge.org/hacenecherfi/ontologies/2018/MusicalProductor">
+        <rdfs:subClassOf rdf:resource="http://www.OntologyTestChallenge.org/hacenecherfi/ontologies/2018/MediaCompany"/>
+        <rdfs:label xml:lang="en">Musical productor</rdfs:label>
+        <owl:sameAs>http://www.ontotext.com/proton/protonext#MusicalProductor</owl:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OntologyTestChallenge.org/hacenecherfi/ontologies/2018/NewsAgency -->
+
+    <owl:Class rdf:about="http://www.OntologyTestChallenge.org/hacenecherfi/ontologies/2018/NewsAgency">
+        <rdfs:subClassOf rdf:resource="http://www.OntologyTestChallenge.org/hacenecherfi/ontologies/2018/MediaCompany"/>
+        <skos:definition xml:lang="en">A news agency is an organization of journalists established to supply news reports to news organizations: newspapers, magazines, and radio and television broadcasters.</skos:definition>
+        <rdfs:label xml:lang="en">News agency</rdfs:label>
+        <owl:sameAs>http://www.ontotext.com/proton/protonext#NewsAgency</owl:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OntologyTestChallenge.org/hacenecherfi/ontologies/2018/PublishingCompany -->
+
+    <owl:Class rdf:about="http://www.OntologyTestChallenge.org/hacenecherfi/ontologies/2018/PublishingCompany">
+        <rdfs:subClassOf rdf:resource="http://www.OntologyTestChallenge.org/hacenecherfi/ontologies/2018/MediaCompany"/>
+        <skos:definition xml:lang="en">An organization which main activity is mass publishing of information. Often, the publishers issue periodic and/or non-periodic documents on paper media. While on-line publishing is considered a typical activity for publishers, the streaming electronic media such as TV and Radio Stations are not.</skos:definition>
+        <rdfs:label xml:lang="en">Publishing company</rdfs:label>
+        <owl:sameAs>http://www.ontotext.com/proton/protonext#PublishingCompany</owl:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OntologyTestChallenge.org/hacenecherfi/ontologies/2018/11/Owner -->
+
+    <owl:Class rdf:about="http://www.OntologyTestChallenge.org/hacenecherfi/ontologies/2018/11/Owner"/>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#Activity -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/prov#Activity">
+        <rdfs:label xml:lang="en">Activity</rdfs:label>
+        <owl:sameAs>http://dbpedia.org/ontology/Activity</owl:sameAs>
+        <skos:definition xml:lang="en">An activity is something that occurs over a period of time and acts upon or with entities; it may include consuming, processing, transforming, modifying, relocating, using, or generating entities.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.OntologyTestChallenge.org/hacenecherfi/ontologies/2018/audioRecording -->
+
+    <owl:NamedIndividual rdf:about="http://www.OntologyTestChallenge.org/hacenecherfi/ontologies/2018/audioRecording">
+        <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.OntologyTestChallenge.org/hacenecherfi/ontologies/2018/filmMaking -->
+
+    <owl:NamedIndividual rdf:about="http://www.OntologyTestChallenge.org/hacenecherfi/ontologies/2018/filmMaking">
+        <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

@@ -3,7 +3,7 @@ from flask import jsonify, request, abort, render_template, make_response
 from flask_restful import Resource
 import uuid
 import json
-from rdflib import Graph
+import rdflib
 from owlready2 import *
 import types
 
@@ -48,10 +48,11 @@ class OntologyListController(Resource):
     def post(self):
         payload = request.json
         ontologies = payload.get('ontologies')
-        g1 = Graph()
+        g1 = rdflib.Graph()
+        print(g1)
         g1.parse('{}/{}.owl'.format(ONTOLOGIES_DIRECTORY, ontologies[0]))
 
-        g2 = Graph()
+        g2 = rdflib.Graph()
         g2.parse('{}/{}.owl'.format(ONTOLOGIES_DIRECTORY, ontologies[1]))
 
         graph = g1 + g2
