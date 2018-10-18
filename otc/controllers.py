@@ -16,14 +16,14 @@ class ConceptListController(Resource):
         payload = request.json
         concept = payload.get('concept')
         parent = payload.get('parent')
-        onto = get_ontology(
-            "{}/{}.owl".format(ONTOLOGIES_DIRECTORY,ontology)
-            ).load()
+        ontology_path = "{}/{}.owl".format(ONTOLOGIES_DIRECTORY,ontology)
+        onto = get_ontology(ontology_path).load()
         concepts = list(onto.classes())
         concept_names = list(map(lambda concept: str(concept), concepts))
         parent_index = concept_names.index(parent)
         with onto:
             NewClass = types.new_class(concept, (concepts[parent_index],))
+        onto.save(ontology_path)
         response = {
             'status': 'Created new concept'
         }
@@ -32,15 +32,15 @@ class ConceptListController(Resource):
     def delete(self, ontology):
         payload = request.json
         concept = payload.get('concept')
-        onto = get_ontology(
-            "{}/{}.owl".format(ONTOLOGIES_DIRECTORY,ontology)
-            ).load()
+        ontology_path = "{}/{}.owl".format(ONTOLOGIES_DIRECTORY,ontology)
+        onto = get_ontology(ontology_path).load()
         concepts = list(onto.classes())
         concept_names = list(map(lambda concept: str(concept), concepts))
         concept_index = concept_names.index(concept)
         destroy_entity(concepts[concept_index])
         response = jsonify({})
         response.status_code = 204
+        onto.save(ontology_path)
         return response
 
 
