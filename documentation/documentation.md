@@ -97,7 +97,7 @@ A Knowledge base resulting of the fusion of the two KBs.
 
 | Parameter	| Description |
 | --- | --- |
-| status <br> _string_ | Ontologies are merged in file _file\_fusion.owl_ |
+| status <br> _string_ | Ontologies are merged in file fileOnto1\_fileOnto2\_fusion.owl |
 
 ##### RESPONSE CODES
 
